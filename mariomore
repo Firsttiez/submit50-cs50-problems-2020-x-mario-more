@@ -1,0 +1,36 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int x;
+    int y;
+    int z;
+    int i;
+    do
+    {
+        x = get_int("height: ");
+    }
+    while (x<1||x>8);
+    for ( y = 0; y < x; y++) //newline
+    {
+        for (z=y+1 ; z < x; z++)// space
+        {
+            printf(" ");
+            
+        }
+        for ( i=0; i < y+1; i++)//#
+            {
+                printf("#");
+            }
+        for (z=y+1; z<y+2; z++)
+        {
+            printf(" ");
+        }
+        for ( i=0; i < y+1; i++)//#
+            {
+                printf("#");
+            }
+        printf("\n");
+    }
+}
